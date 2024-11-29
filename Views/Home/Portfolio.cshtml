@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<div class="portfolio-section">
+    <h2>My Portfolio</h2>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h3>About Me</h3>
+        <p>
+            Hello, I am Bafana Qhoboshiyane, a passionate software developer with expertise in various programming languages. I enjoy learning new technologies and building innovative solutions. Feel free to explore my projects below.
+        </p>
+        <!-- Download CV Button -->
+        <div class="download-cv">
+            <a href="/Content/Bafana_Qhoboshiyane_CV.pdf" class="btn btn-primary" download>
+                <i class="bi bi-download" style="margin-right: 5px;"></i>Download My CV
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h3>Skills</h3>
+        <div class="skill">
+            <i class="bi bi-braces" style="font-size: 40px;"></i>
+            <p>Programming</p>
+        </div>
+        <div class="skill">
+            <i class="bi bi-graph-up" style="font-size: 40px;"></i>
+            <p>Data Analysis</p>
+        </div>
+        <div class="skill">
+            <i class="bi bi-shield-lock" style="font-size: 40px;"></i>
+            <p>Cyber Security</p>
+        </div>
+        <div class="skill">
+            <i class="bi bi-pie-chart" style="font-size: 40px;"></i>
+            <p>Data Visualization</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h3>My Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card">
+                <i class="bi bi-laptop" style="font-size: 50px; color: #007bff;"></i>
+                <h3>WordPress</h3>
+                <p>PAICTA Project 2024</p>
+                <a href="https://paicta.digital/home-2/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Project</a>
+            </div>
+            <div class="project-card">
+                <i class="bi bi-app-indicator" style="font-size: 50px; color: #007bff;"></i>
+                <h3>Windows Forms</h3>
+                <p>NMU 2nd year projecr</p>
+                @* <a href="#" class="project-link">View Project</a> *@
+            </div>
+            <div class="project-card">
+                <i class="bi bi-server" style="font-size: 50px; color: #007bff;"></i>
+                <h3>E-Learning system</h3>
+                <p>NMU 3rd Year project</p>
+                @* <a href="#" class="project-link">View Project</a> *@
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h3>Testimonials</h3>
+        <p>"Bafana is a talented developer with great problem-solving skills." - Sibongile Ntantiso- Colleague</p>
+        <p>"His work in data analysis and security is impressive."-Sihle Jim - Colleague</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <a href="mailto:intern05@paicta.org" class="btn-primary">Get in Touch</a>
+    </section>
+</div>

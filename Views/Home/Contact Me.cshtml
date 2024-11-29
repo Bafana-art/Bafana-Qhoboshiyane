@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<div class="contact-container">
+    <h2>Contact Me</h2>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form id="contactForm" onsubmit="return showConfirmationMessage(event)">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Confirmation Message Container -->
+    <div id="confirmationMessage" class="confirmation-message" style="display:none;">
+        <p>Thank you for contacting us! We will get back to you shortly.</p>
+    </div>
+
+    <!-- Confirmation Message Container -->
+    <div id="confirmationMessage" class="confirmation-message" style="display:none;">
+        <p>Thank you for contacting us! We will get back to you shortly.</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <h3>Alternatively, you can reach me at:</h3>
+        <ul>
+            <li>Email: <a href="mailto:bafanaqobo.com">bafanaqobo.com</a></li>
+            <li>Phone: <a href="tel:+27787266127">+27 78 726 6127</a></li>
+           @*  <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+            <li>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></li> *@
+        </ul>
+    </div>
+</div>
+<script>
+    function showConfirmationMessage() {
+        // Prevents the form from submitting to the server (optional if you're handling backend).
+        event.preventDefault();
+
+        // Hide the form (optional, can be adjusted based on your needs).
+        document.getElementById('contactForm').style.display = 'none';
+
+        // Show the confirmation message.
+        document.getElementById('confirmationMessage').style.display = 'block';
+
+        // You can also send the form data to the server here using an AJAX request if needed.
+        // Example: Send the data using fetch or XMLHttpRequest
+
+        return false; // Prevent default form submission
+    }
+</script>
+

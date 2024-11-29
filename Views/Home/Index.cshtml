@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bafana Qhoboshiyane - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="home-container">
+            <!-- Anchor tag wrapping the whole container -->
+            <a href="Home/Portfolio" class="portfolio-link">
+                <!-- Image is inside the clickable area -->
+                <img src="~/Content/background.jpg.jpeg" alt="Bafana Qhoboshiyane" class="home-image">
+                <h1>Bafana Qhoboshiyane</h1>
+                <h3>View My Portfolio</h3>   
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle image resizing -->
+    <script>
+        window.onload = function () {
+            resizeImage();
+        };
+
+        window.onresize = function () {
+            resizeImage();
+        };
+
+        function resizeImage() {
+            var img = document.querySelector('.home-image');
+            var container = document.querySelector('.home-container');
+
+            // Get the width of the container
+            var containerWidth = container.offsetWidth;
+
+            // Adjust image size based on the container width
+            if (containerWidth < 500) {
+                img.style.width = '100px'; // For smaller screens
+            } else if (containerWidth < 1000) {
+                img.style.width = '150px'; // Medium screens
+            } else {
+                img.style.width = '200px'; // Larger screens
+            }
+
+            // Maintain aspect ratio and avoid distortion
+            img.style.height = 'auto';
+            img.style.objectFit = 'cover'; // Ensures the image fills the area without distortion
+        }
+    </script>
+
+</body>
+</html>
